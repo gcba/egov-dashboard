@@ -1,0 +1,231 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>eGov Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Buenos Aires Electronic Government - @eGovBA">
+
+    <meta name="Title" content="eGov Dashboard" />
+    <meta name="description" content="electronic Government Dashboard" />
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <a id="authorize-button" href="javascript:;">GA login</a>
+
+          <div id="realtime-visitors" class="carousel slide">
+            <h4>VISITAS TIEMPO REAL</h4>
+            <!-- Indicators -->
+            <ol class="carousel-indicators" data-bind="foreach: ga.realtime">
+              <li data-target="#realtime-visitors" data-bind="css: { active: $index() == 0}, attr: {'data-slide-to': $index()}"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" data-bind="foreach: ga.realtime">
+
+              <div data-bind="css: { active: $index() == 0}, attr: {'id': 'ga_' + id()}" class='item'>
+                <div class="carousel-caption">
+                  <h1 data-bind="text: name"></h1>
+                  <h2 data-bind="text: qty"></h2>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+
+
+          <div id="ba-id" class="carousel slide">
+            <h4>TOP 5 USUARIOS REDMINE</h4>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#ba-id" class="active" data-slide-to="0"></li>
+              <li data-target="#ba-id" data-slide-to="1"></li>
+              <li data-target="#ba-id" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+              <div id="baid_registered" class='item active'>
+                <div class="carousel-caption">
+                  <h1>Registro</h1>
+                  <h2 data-bind="text: baid.registered"></h2>
+                </div>
+              </div>
+
+              <div id="baid_active" class='item'>
+                <div class="carousel-caption">
+                  <h1>Activo</h1>
+                  <h2 data-bind="text: baid.active"></h2>
+                </div>
+              </div>
+
+              <div id="baid_complete" class='item'>
+                <div class="carousel-caption">
+                  <h1>Completo</h1>
+                  <h2 data-bind="text: baid.complete"></h2>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          otra cosa
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="redmine-hours" class="carousel slide">
+            <h4>TOTAL HORAS REDMINE</h4>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#redmine-hours" class="active" data-slide-to="0"></li>
+              <li data-target="#redmine-hours" data-slide-to="1"></li>
+              <li data-target="#redmine-hours" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+              <div id="redmine_day" class='item active'>
+                <div class="carousel-caption">
+                  <h1>Día</h1>
+                  <h2 data-bind="text: hours.day"></h2>
+                </div>
+              </div>
+
+              <div id="redmine_week" class='item'>
+                <div class="carousel-caption">
+                  <h1>Semana</h1>
+                  <h2 data-bind="text: hours.week"></h2>
+                </div>
+              </div>
+
+              <div id="redmine_month" class='item'>
+                <div class="carousel-caption">
+                  <h1>Mes</h1>
+                  <h2 data-bind="text: hours.month"></h2>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="redmine-top-users" class="carousel slide">
+
+            <h4>TOP 5 USUARIOS REDMINE</h4>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators" data-bind="foreach: users.top">
+              <li data-target="#redmine-top-users" data-bind="css: { active: $index() == 0}, attr: {'data-slide-to': $index()}"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+              <div class="carousel-inner" data-bind="foreach: users.top">
+
+                <div data-bind="css: { active: $index() == 0}, attr: {'id': 'rm_' + $index()}" class='item'>
+                  <div class="carousel-caption">
+                    <h3 data-bind="text: user.name"></h3>
+                    <h2 data-bind="text: total"></h2>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="top-paths-today" class="carousel slide">
+
+            <h4>TOP 5 PÁGINAS VISITADAS</h4>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators" data-bind="foreach: ga.contents">
+              <li data-target="#top-paths-today" data-bind="css: { active: $index() == 0}, attr: {'data-slide-to': $index()}"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" data-bind="foreach: ga.contents">
+
+              <div data-bind="css: { active: $index() == 0}, attr: {'id': 'ga_' + id()}" class='item'>
+                <div class="carousel-caption">
+                  <h1 data-bind="text: name"></h1>
+                  <table class="table">
+                    <tbody data-bind="foreach: paths">
+                      <tr>
+                        <td data-bind="text: $data[0]"></td>
+                        <td data-bind="text: $data[1]"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+
+        function GAClientLoaded() {
+          AnalyticsData.init();
+        };
+
+        window.onload=function(){
+          BAIdData.init();
+          RedmineData.init();
+        };
+
+    </script>
+
+
+    <script src="js/config.js"></script>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/lodash.js"></script>
+    <script src='js/knockout-2.3.0.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=GAClientLoaded"></script>
+    <script src="js/analyticsData.js"></script>
+    <script src="js/baIdData.js"></script>
+    <script src="js/redmineData.js"></script>
+  </body>
+</html>

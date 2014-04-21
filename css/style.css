@@ -1,0 +1,137 @@
+
+/*BAID*/
+#ba-id .item{
+	height: 480px;
+}
+
+#baid_registered{
+	background-color: #d35400;
+}
+
+#baid_active{
+	background-color: #e67e22;
+}
+
+#baid_complete{
+	background-color: #e74c3c;
+}
+
+/*GA*/
+#realtime-visitors .item{
+	height: 480px;
+}
+
+#top-paths-today .item{
+	height: 480px;
+}
+	
+#ga_agenda{
+	background-color: #1abc9c;
+}
+
+#ga_mapa{
+	background-color: #2ecc71;
+}
+
+#ga_ba{
+	background-color: #3498db;
+}
+
+/*REDMINE*/
+#redmine-hours .item{
+	height: 480px;
+}
+
+#redmine_week{
+	background-color: #2c3e50;
+}
+
+#redmine_day{
+	background-color: #7f8c8d;
+}
+
+#redmine_month{
+	background-color: #34495e;
+}
+
+/*TOP users*/
+#redmine-top-users .item{
+	height: 480px;
+}
+
+#rm_0{
+	background-color: #291411;	
+}
+
+#rm_1{
+	background-color: #522417;	
+}
+
+#rm_2{
+	background-color: #B02F1C;	
+}
+
+#rm_3{
+	background-color: #DB3C1E;	
+}
+
+#rm_4{
+	background-color: #FB5C34;	
+}
+
+.hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
+.hero-widget .icon { display: block; font-size: 96px; line-height: 96px; margin-bottom: 10px; text-align: center; }
+.hero-widget var { display: block; height: 64px; font-size: 64px; line-height: 64px; font-style: normal; }
+.hero-widget label { font-size: 17px; }
+.hero-widget .options { margin-top: 10px; }
+
+.carousel-caption{
+	width: 100%;
+	right: 0;
+	left: 0;
+}
+
+h1{
+	font-size: 100px;
+	line-height: 100px;
+}
+
+h2{
+	font-size: 200px;
+	line-height: 230px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+
+h3{
+	font-size: 62px;
+	line-height: 54px;
+	font-weight: bold;
+	padding: 0 10px;
+	margin: 0;
+}
+
+.col-lg-12,.col-lg-6{
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+td{
+	font-size: 20px;
+}
+
+h4{
+	position: absolute;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 100;
+	margin: 0px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 38px;
+}
+
