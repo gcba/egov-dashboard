@@ -4,6 +4,11 @@
 	height: 480px;
 }
 
+
+body * {
+font-family: 'Alegreya Sans', 'sans-serif'!important;
+}
+
 #baid_registered{
 	background-color: #d35400;
 }
@@ -26,7 +31,9 @@
 }
 	
 #ga_agenda{
-	background-color: #1abc9c;
+	background-image: url(../img/agenda.jpg);
+	background-size: cover;
+	background-position: 50%
 }
 
 #ga_mapa{
@@ -34,7 +41,9 @@
 }
 
 #ga_ba{
-	background-color: #3498db;
+	background-image: url(../img/gcba.jpg);
+	background-size: cover;
+	background-position: 50%
 }
 
 /*REDMINE*/
@@ -92,8 +101,10 @@
 }
 
 h1{
-	font-size: 100px;
-	line-height: 100px;
+	font-size: 90px;
+	line-height: 60px;
+	font-weight: 300;
+	margin:0!important;
 }
 
 h2{
@@ -125,13 +136,15 @@ td{
 
 h4{
 	position: absolute;
-	background-color: rgba(0,0,0,0.2);
 	z-index: 100;
 	margin: 0px;
 	padding: 10px;
 	width: 100%;
 	text-align: center;
-	color: white;
 	font-size: 38px;
+	color: rgba(0,0,0,0.7);
+	text-shadow:0 1px 0 rgba(255,255,255,0.1);
+	font-weight: 300;
+
 }
 
