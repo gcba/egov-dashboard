@@ -10,15 +10,15 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 }
 
 #baid_registered{
-	background-color: #d35400;
+	background-color: #FFD300;
 }
 
 #baid_active{
-	background-color: #e67e22;
+	background-color: #2980b9;
 }
 
 #baid_complete{
-	background-color: #e74c3c;
+	background-color: #27ae60;
 }
 
 /*GA*/
@@ -36,17 +36,29 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 	background-position: 50%
 }
 
+	#ga_agenda h1 {
+		color:#f13a3a;
+	}
+
+
 #ga_mapa{
 	background-image: url(../img/mapa.jpg);
 	background-size: cover;
 	background-position: 50%
 }
+	#ga_mapa h1 {
+		color:#2ecc71;
+	}
 
 #ga_ba{
 	background-image: url(../img/gcba.jpg);
 	background-size: cover;
 	background-position: 50%
 }
+
+	#ga_ba h1 {
+		color:#FFD300;
+	}
 
 /*REDMINE*/
 #redmine-hours .item{
@@ -150,3 +162,6 @@ h4{
 
 }
 
+.carousel-caption {
+	bottom:40px;
+}
