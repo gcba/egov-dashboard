@@ -52,6 +52,7 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 
 #ga_ba h1,#ga_mapa h1,#ga_agenda h1 {
 	color:#101010;
+	font-weight: bold;
 }
 /*REDMINE*/
 #redmine-hours .item{
@@ -76,23 +77,33 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 }
 
 #rm_0{
-	background-color: #291411;	
+		background-image: url(../img/cara1.jpg);
+	background-size: cover;
+	background-position: 50%	
 }
 
 #rm_1{
-	background-color: #522417;	
+		background-image: url(../img/cara2.jpg);
+	background-size: cover;
+	background-position: 50%	
 }
 
 #rm_2{
-	background-color: #B02F1C;	
+		background-image: url(../img/cara3.jpg);
+	background-size: cover;
+	background-position: 50%		
 }
 
 #rm_3{
-	background-color: #DB3C1E;	
+		background-image: url(../img/cara4.jpg);
+	background-size: cover;
+	background-position: 50%		
 }
 
 #rm_4{
-	background-color: #FB5C34;	
+		background-image: url(../img/cara5.jpg);
+	background-size: cover;
+	background-position: 50%	
 }
 
 .hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
