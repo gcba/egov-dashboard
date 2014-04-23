@@ -36,19 +36,13 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 	background-position: 50%
 }
 
-	#ga_agenda h1 {
-		color:#f13a3a;
-	}
-
 
 #ga_mapa{
 	background-image: url(../img/mapa.jpg);
 	background-size: cover;
 	background-position: 50%
 }
-	#ga_mapa h1 {
-		color:#2ecc71;
-	}
+
 
 #ga_ba{
 	background-image: url(../img/gcba.jpg);
@@ -56,10 +50,9 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 	background-position: 50%
 }
 
-	#ga_ba h1 {
-		color:#FFD300;
-	}
-
+#ga_ba h1,#ga_mapa h1,#ga_agenda h1 {
+	color:#101010;
+}
 /*REDMINE*/
 #redmine-hours .item{
 	height: 480px;
@@ -119,6 +112,7 @@ h1{
 	line-height: 60px;
 	font-weight: 300;
 	margin:0!important;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
 }
 
 h2{
