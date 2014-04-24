@@ -15,6 +15,7 @@ var BAIdData;
 
     BAIdData.bindings = {
         date: ko.observable(),
+        loading: ko.observable(true),
         baid : {
             registered:ko.observable(2),
             active:ko.observable(3),
@@ -31,7 +32,9 @@ var BAIdData;
     };
 
     BAIdData.getData = function () {
+        BAIdData.bindings.loading(true);
         $.getJSON(Config.baid.servicebaid+'?callback=?',function(data){
+            BAIdData.bindings.loading(false);
             BAIdData.bindings.baid.registered(data.registration);
             BAIdData.bindings.baid.active(data.users);
             BAIdData.bindings.baid.complete(data.profile);

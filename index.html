@@ -32,6 +32,8 @@
 
           <div id="realtime-visitors" class="carousel slide">
             <h4>VISITAS TIEMPO REAL</h4>
+            <h6 class="loading" data-bind="style: { display: ga.loading() == true ? 'block' : 'none' }">cargando...</h6>
+            <h6 class="date" data-bind="style: { display: ga.loading() == false ? 'block' : 'none' }, text: ga.date"></h6>
             <!-- Indicators -->
             <ol class="carousel-indicators" data-bind="foreach: ga.realtime">
               <li data-target="#realtime-visitors" data-bind="css: { active: $index() == 0}, attr: {'data-slide-to': $index()}"></li>
@@ -56,9 +58,10 @@
       <div class="row">
         <div class="col-lg-6">
 
-
           <div id="ba-id" class="carousel slide">
             <h4>USUARIOS BA ID</h4>
+            <h6 class="loading" data-bind="style: { display: loading() == true ? 'block' : 'none' }">cargando...</h6>
+            <h6 class="date" data-bind="style: { display: loading() == false ? 'block' : 'none' }, text: date"></h6>
             <!-- Indicators -->
             <ol class="carousel-indicators">
               <li data-target="#ba-id" class="active" data-slide-to="0"></li>
@@ -103,6 +106,8 @@
         <div class="col-lg-6">
           <div id="redmine-hours" class="carousel slide">
             <h4>TOTAL HORAS REDMINE</h4>
+            <h6 class="loading" data-bind="style: { display: loading() == true ? 'block' : 'none' }">cargando...</h6>
+            <h6 class="date" data-bind="style: { display: loading() == false ? 'block' : 'none' }, text: date"></h6>
             <!-- Indicators -->
             <ol class="carousel-indicators">
               <li data-target="#redmine-hours" class="active" data-slide-to="0"></li>
@@ -142,6 +147,8 @@
           <div id="redmine-top-users" class="carousel slide">
 
             <h4>TOP 5 USUARIOS REDMINE</h4>
+            <h6 class="loading" data-bind="style: { display: loading() == true ? 'block' : 'none' }">cargando...</h6>
+            <h6 class="date" data-bind="style: { display: loading() == false ? 'block' : 'none' }, text: date"></h6>
 
             <!-- Indicators -->
             <ol class="carousel-indicators" data-bind="foreach: users.top">
@@ -168,18 +175,16 @@
         </div>
       </div>
 
-      <div class="row">
+      <!--div class="row">
         <div class="col-lg-12">
           <div id="top-paths-today" class="carousel slide">
 
-            <h4>TOP 5 PÁGINAS VISITADAS</h4>
+            <h4>TOP 5 PÁGINAS VISITADAS <span class="loading" data-bind="style: { display: ga.loading() == true ? 'block' : 'none' }">cargando...</span></h4>
 
-            <!-- Indicators -->
             <ol class="carousel-indicators" data-bind="foreach: ga.contents">
               <li data-target="#top-paths-today" data-bind="css: { active: $index() == 0}, attr: {'data-slide-to': $index()}"></li>
             </ol>
 
-            <!-- Wrapper for slides -->
             <div class="carousel-inner" data-bind="foreach: ga.contents">
 
               <div data-bind="css: { active: $index() == 0}, attr: {'id': 'ga_' + id()}" class='item'>
@@ -200,7 +205,7 @@
 
           </div>
         </div>
-      </div>
+      </div-->
 
     </div>
 

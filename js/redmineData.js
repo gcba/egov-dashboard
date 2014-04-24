@@ -11,6 +11,8 @@ var RedmineData;
 
     RedmineData.refreshTime = 10*60*1000;    
 
+    RedmineData.intervaTime = 10*1000;  
+
     RedmineData.timerId = null;
 
     RedmineData.lastMonthDate = undefined;
@@ -18,6 +20,7 @@ var RedmineData;
     RedmineData.tempRawData = [];
 
     RedmineData.bindingsUser = {
+        loading: ko.observable(true),
         date: ko.observable(),
         nestedUsers: ko.observable({}),
         users : {
@@ -26,6 +29,7 @@ var RedmineData;
     };
 
     RedmineData.bindings = {
+        loading: ko.observable(true),
         date: ko.observable(),
         rawData: ko.observableArray([]),
         hours : {
@@ -48,6 +52,8 @@ var RedmineData;
         this.timerId = setInterval(function(){
             that.lastMonthDate = that.getLastMonth(that.getToday());
             RedmineData.tempRawData = [];
+            RedmineData.bindings.loading(true);
+            RedmineData.bindingsUser.loading(true);
             that.getData();
         },this.refreshTime);
     };
@@ -79,10 +85,12 @@ var RedmineData;
         RedmineData.bindings.rawData(RedmineData.tempRawData);
         RedmineData.bindingsUser.nestedUsers(_.groupBy(RedmineData.bindings.rawData(),function(item){return item.user.id;}));
         $('#redmine-top-users').carousel({
-          interval: 5000
+          interval: RedmineData.intervaTime
         });
         RedmineData.bindingsUser.date(new Date());
         RedmineData.bindings.date(new Date());
+        RedmineData.bindings.loading(false);
+        RedmineData.bindingsUser.loading(false);
     };
 
     RedmineData.getTotal = function(array, date){
@@ -113,7 +121,7 @@ var RedmineData;
 
     RedmineData.startCarousel = function(){
         $('#redmine-hours').carousel({
-          interval: 4000
+          interval: RedmineData.intervaTime
         });
     };
 

@@ -11,6 +11,7 @@ var AnalyticsData;
 
     AnalyticsData.bindings = {
         ga : {
+            loading: ko.observable(true),
             date: ko.observable(),
             realtime:ko.observableArray(0),
             contents:ko.observableArray(0)
@@ -40,7 +41,7 @@ var AnalyticsData;
         var that = this;
         window.setTimeout(function(){that.checkAuth();},1);
         ko.applyBindings(AnalyticsData.bindings,document.getElementById("realtime-visitors"));
-        ko.applyBindings(AnalyticsData.bindings,document.getElementById("top-paths-today"));
+        //ko.applyBindings(AnalyticsData.bindings,document.getElementById("top-paths-today"));
     };
 
     AnalyticsData.checkAuth = function() {
@@ -81,9 +82,10 @@ var AnalyticsData;
 
     AnalyticsData.queryAccounts = function() {
         var that = this;
+        AnalyticsData.bindings.ga.loading(true);
         $.each(Config.ga.sites,function(i,e){
             that.getRealTimeVisits(i);
-            that.getTopPagesToday(i);
+            //that.getTopPagesToday(i);
         });
     };
 
@@ -95,6 +97,7 @@ var AnalyticsData;
             'metrics': 'rt:activeVisitors'
             }).execute(function(data){
                 if(!data.error){
+                    AnalyticsData.bindings.ga.loading(false);
                     that.setRealTimeVisits(Config.ga.sites['ga:'+data.profileInfo.profileId],data.result.totalsForAllResults['rt:activeVisitors']);
                     that.startCarousel();
                 }
