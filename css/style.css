@@ -1,9 +1,12 @@
 
+* {
+	cursor: none !important;
+}
+
 /*BAID*/
 #ba-id .item{
 	height: 480px;
 }
-
 
 body * {
 font-family: 'Alegreya Sans', 'sans-serif'!important;
