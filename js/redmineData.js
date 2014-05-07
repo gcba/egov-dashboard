@@ -9,7 +9,7 @@ var RedmineData;
 
     RedmineData = global.RedmineData = global.RedmineData || {};
 
-    RedmineData.refreshTime = 10*60*1000;    
+    RedmineData.refreshTime = 10*1000;    
 
     RedmineData.intervaTime = 10*1000;  
 
@@ -83,6 +83,7 @@ var RedmineData;
 
     RedmineData.calculate = function(date){
         RedmineData.bindings.rawData(RedmineData.tempRawData);
+        RedmineData.bindingsUser.nestedUsers({});
         RedmineData.bindingsUser.nestedUsers(_.groupBy(RedmineData.bindings.rawData(),function(item){return item.user.id;}));
         $('#redmine-top-users').carousel({
           interval: RedmineData.intervaTime
