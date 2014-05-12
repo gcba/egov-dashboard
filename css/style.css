@@ -32,6 +32,10 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 #top-paths-today .item{
 	height: 480px;
 }
+
+#realtime-visitors .item{
+	color:#FFD300;
+}
 	
 #ga_agenda{
 	background-image: url(../img/agenda.jpg);
@@ -53,7 +57,11 @@ font-family: 'Alegreya Sans', 'sans-serif'!important;
 	background-position: 50%
 }
 
-#ga_ba h1,#ga_mapa h1,#ga_agenda h1 {
+#ga_secundaria{
+	background-color: #FFD300;
+}
+
+#realtime-visitors h1{
 	color:#101010;
 	font-weight: bold;
 }
