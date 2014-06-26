@@ -17,9 +17,9 @@ var BAIdData;
         date: ko.observable(),
         loading: ko.observable(true),
         baid : {
-            registered:ko.observable(2),
-            active:ko.observable(3),
-            complete:ko.observable(4)
+            registered:ko.observable(),
+            users_now:ko.observable(),
+            complete:ko.observable()
         }
     };
 
@@ -36,7 +36,7 @@ var BAIdData;
         $.getJSON(Config.baid.servicebaid+'?callback=?',function(data){
             BAIdData.bindings.loading(false);
             BAIdData.bindings.baid.registered(data.registration);
-            BAIdData.bindings.baid.active(data.users);
+            BAIdData.bindings.baid.users_now(data.users);
             BAIdData.bindings.baid.complete(data.profile);
             BAIdData.bindings.date(new Date());
         });
